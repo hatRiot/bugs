@@ -256,34 +256,8 @@ SIZE_T GetProcessToken()
 	return dwToken;
 }
 
-void feye()
-{
-	LPCSTR lpDeviceName = (LPCSTR)"\\\\.\\SAVOnAccess";
-	HANDLE hDriver;
-
-	hDriver = CreateFileA(lpDeviceName,
-		GENERIC_READ | GENERIC_WRITE,
-		FILE_SHARE_READ | FILE_SHARE_WRITE,
-		NULL,
-		OPEN_EXISTING,
-		FILE_ATTRIBUTE_NORMAL | FILE_FLAG_OVERLAPPED,
-		NULL);
-
-	if (hDriver == INVALID_HANDLE_VALUE) {
-		printf("Failed to open handle: %08x\n", GetLastError());
-		return -1;
-	}
-
-	printf("Got handle!\n");
-
-
-	CloseHandle(hDriver);
-}
-
 int main()
 {
-	feye();
-	return;
 	LPCSTR lpDeviceName = (LPCSTR)"\\\\.\\PCDSRVC{3B54B31B-D06B6431-06020200}_0";
 	//LPCSTR lpDeviceName = (LPCSTR)"\\\\.\\pcdsrvc_x64";
 	HANDLE hDriver;
