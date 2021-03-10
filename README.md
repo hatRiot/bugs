@@ -11,3 +11,7 @@ Dell Digital Delivery LPE. Using the PoC, you'll need to drop a DLL under the ap
 ## dell-support-assist
 CVE-2018-XXX LPE in Dell/PC-Doctor SupportAssist kernel driver < 2.2
 http://hatriot.github.io/2018/05/17/dell-supportassist-local-privilege-escalation/
+
+## CVE-2021-1648
+Windows 10 LPE, adopted from Google Project Zero's public PoC
+http://dronesec.pw/2021/03/10/on-exploiting-cve-2021-1648/
